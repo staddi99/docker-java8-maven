@@ -9,11 +9,6 @@ MAINTAINER Maximilian Stadtmüller (https://github.com/staddi99)
 # this is a non-interactive automated build - avoid some warning messages
 ENV DEBIAN_FRONTEND noninteractive
 
-# update dpkg repositories
-RUN dpkg-divert --local --rename --add /sbin/initctl
-RUN ln -s /bin/true /sbin/initctl
-RUN apt-get update 
-
 # install wget
 RUN apt-get install -y wget
 

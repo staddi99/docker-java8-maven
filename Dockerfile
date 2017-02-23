@@ -2,9 +2,9 @@
 # Oracle Java 1.8.0_101 64 bit
 # Maven 3.3.9
 
-FROM ubuntu:16.04
+FROM armhf/ubuntu:16.04
 
-MAINTAINER Kai Winter (https://github.com/kaiwinter)
+MAINTAINER Maximilian Stadtmüller (https://github.com/staddi99)
 
 # this is a non-interactive automated build - avoid some warning messages
 ENV DEBIAN_FRONTEND noninteractive

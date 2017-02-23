@@ -10,6 +10,8 @@ MAINTAINER Maximilian Stadtmüller (https://github.com/staddi99)
 ENV DEBIAN_FRONTEND noninteractive
 
 # update dpkg repositories
+RUN dpkg-divert --local --rename --add /sbin/initctl
+RUN ln -s /bin/true /sbin/initctl
 RUN apt-get update 
 
 # install wget
